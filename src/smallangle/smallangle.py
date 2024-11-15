@@ -1,9 +1,15 @@
+"""Calculate a certain amount of sinus or tangent values, using respectively the sin or tan functions.
+
+This module defines functions to be called upon by a command, we also define the command group these functions can be found in.
+"""
+
 import click
 import numpy as np
 from numpy import pi
 import pandas as pd
 
 #context settings, add this to command group to allow '-h' to be used aswell as '--help'
+#source: https://click.palletsprojects.com/en/stable/documentation/#help-parameter-customization
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 
 @click.group(context_settings = CONTEXT_SETTINGS)
