@@ -3,10 +3,12 @@ import numpy as np
 from numpy import pi
 import pandas as pd
 
+#context settings, add this to command group to allow '-h' to be used aswell as '--help'
+CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 
-@click.group()
+@click.group(context_settings = CONTEXT_SETTINGS)
 def cmd_group():
-    """Initializes the cmd_group click group
+    """Calculate a certain amount of sinus or tangent values.
     """
     pass
 
